@@ -18,7 +18,7 @@ function rejected(opts) {
     opts = opts || {};
     crayon.red.error(err);
     console.error(err.stack);
-    if (forceExit) {
+    if (opts.forceExit) {
       process.exit(err.code || -1);
     }
     return err;
