@@ -1,0 +1,30 @@
+{
+  "name": "promise-print",
+  "version": "2.0.0",
+  "description": "Prints the results of a Promise to the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccheever/promise-print.git"
+  },
+  "keywords": [
+    "promise",
+    "print",
+    "console",
+    "log",
+    "async",
+    "results"
+  ],
+  "author": "Charlie Cheever <ccheever@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccheever/promise-print/issues"
+  },
+  "homepage": "https://github.com/ccheever/promise-print#readme",
+  "dependencies": {
+    "@ccheever/crayon": "^5.0.0"
+  }
+}
