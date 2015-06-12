@@ -4,7 +4,11 @@ function resolved(opts) {
   return function (result) {
     opts = opts || {};
     if (result != null) {
-      console.log(result);
+      if (opts.prefix) {
+        console.log(opts.prefix, result);
+      } else {
+        console.log(result);
+      }
     }
     if (opts.forceExit) {
       process.exit(0);
@@ -16,7 +20,11 @@ function resolved(opts) {
 function rejected(opts) {
   return function (err) {
     opts = opts || {};
-    crayon.red.error(err);
+    if (opts.prefix) {
+      crayon.red.error(opts.prefix, err);
+    } else {
+      crayon.red.error(err);
+    }
     console.error(err.stack);
     if (opts.forceExit) {
       process.exit(err.code || -1);
