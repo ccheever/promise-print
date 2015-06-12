@@ -3,7 +3,7 @@ var crayon = require('@ccheever/crayon');
 function resolved(opts) {
   return function (result) {
     opts = opts || {};
-    if (result != null) {
+    if ((result != null) || (opts.alwaysPrintResult)) {
       if (opts.prefix) {
         console.log(opts.prefix, result);
       } else {
